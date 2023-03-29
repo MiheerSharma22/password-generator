@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    min-width: 360px;
+    width: 27%;
+}
+
+h1 {
+    font-size: 2.6rem;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 4rem;
+    opacity: 80%;
+}
+
+.display-container {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.output {
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    border:none;
+    margin-bottom: 3rem;
+    /* box-shadow: -8px 14px 30px 5px rgba(0,0,0,0.72) ,8px 0px 30px 5px rgba(0,0,0,0.72); */
+    position: relative;
+    box-shadow: -3px -1px 44px -8px rgba(0,0,0,0.72);
+}
+
+.output::placeholder {
+    color: black;
+    font-size: 1.5rem;
+    opacity: 70%;
+    text-transform: uppercase;
+}
+
+.output:focus {
+    outline: none;
+}
+
+.copy{
+    position: absolute;
+    background: transparent;
+    border: none;
+    right: 20px;
+    top: 27px;
+    bottom: 50%;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.copied-to-clipboard {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    padding: 5 10px;
+    color: rgba(255, 255, 255, 0.879);
+    background-color: #ff4400a7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 18px;
+    z-index: 1;
+    right: 0px;
+    top: -10px;
+    border-radius: 10px;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+/* for making the "copied" message visible on clicking */
+.active{
+    opacity:1;
+    transform: scale(1);
+    transform-origin: bottom;
+}
+
+.bottom-container {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    /* filter: saturate(180%) blur(10px); */
+    box-shadow: -3px -1px 44px -8px rgba(0,0,0,0.72);
+}
+
+.show-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.show-length  p {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+#password-length{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    appearance: none;
+    height: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+/* UNDERSTAND THESE */
+#password-length::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 0.8rem;
+    background-color: #ccc;
+    background-image: linear-gradient(#ff4400ab , #ff4400ab);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius:  10px;
+ }
+ #password-length::-webkit-slider-thumb {
+    position: relative;
+    bottom: 3px;
+    -webkit-appearance: none;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50%;
+    background-color: #ff4400;
+    margin-top: -4px;
+ }
+ #password-length:hover::-webkit-slider-thumb {
+    background-color: white;
+    border: 1px solid #ff4400;
+    cursor: pointer;
+ }
+
+
+
+.checkboxes {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type = 'checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type = 'checkbox']:checked {
+    background-color: #71a3ff76;
+}
+
+input[type = 'checkbox']:checked::after {
+    position: absolute;
+    content: '✓';
+    color:black;
+    font-size: 1.3rem;
+    font-weight: bold;
+    bottom: -1px;
+}
+
+.generate {
+    width: 100%;
+    border-radius: 0.6rem;
+    color: white;
+    background-color: #ff4400;
+    border: 1px solid #ff4400;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+}
+.generate:hover {
+    background-color: white;
+    color: #ff4400;
+    border: 1px solid #ff4400;
+    transition: background-color;
+    transition-duration: 0.2s;
+}
